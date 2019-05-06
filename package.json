@@ -4,18 +4,16 @@
   "description": "backend for the rocket app",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "charles scheuer",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^1.19.0"
-  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "knex": "^0.16.5",
-    "pg": "^7.10.0"
+    "pg": "^7.10.0",
+    "nodemon": "^1.19.0"
   }
 }
