@@ -9,7 +9,7 @@
   "author": "charles scheuer",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^1.18.11"
+    "nodemon": "^1.19.0"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
