@@ -2,10 +2,9 @@
   "name": "rocket-git-api",
   "version": "1.0.0",
   "description": "backend for the rocket app",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "start:dev": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "charles scheuer",
   "license": "ISC",
@@ -14,7 +13,6 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "knex": "^0.16.5",
-    "pg": "^7.10.0",
-    "nodemon": "^1.19.0"
+    "pg": "^7.10.0"
   }
 }
