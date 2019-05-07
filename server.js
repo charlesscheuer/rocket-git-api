@@ -25,13 +25,7 @@ app.post('/register', (req, res) => {
     .then(() => {
       res.json('success')
     })
-    .catch(err =>
-      res
-        .status(400)
-        .json(
-          'Unable to register, please try again. If the problem persists please contact us.'
-        )
-    )
+    .catch(err => res.status(400).json(err))
 })
 
 app.get('/count', (req, res) => {
@@ -43,11 +37,11 @@ app.get('/count', (req, res) => {
     .then(count => {
       res.json(count)
     })
-    .catch(() => res.json('450'))
+    .catch(err => res.status(400).json(err))
 })
 
 app.get('/', (req, res) => {
-  res.json('it worked')
+  res.json('server is working')
 })
 
 app.listen(process.env.PORT || 3000, () => {
