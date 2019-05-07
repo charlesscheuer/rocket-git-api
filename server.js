@@ -4,6 +4,10 @@ const cors = require('cors')
 
 const knex = require('knex')
 
+const app = express()
+app.use(bodyParser.json())
+app.use(cors())
+
 const db = knex({
   client: 'pg',
   connection: {
@@ -13,10 +17,6 @@ const db = knex({
     database: 'rocket'
   }
 })
-
-const app = express()
-app.use(bodyParser.json())
-app.use(cors())
 
 app.post('/register', (req, res) => {
   const { email } = req.body
@@ -46,6 +46,10 @@ app.get('/count', (req, res) => {
       res.json(count)
     })
     .catch(() => res.json('450'))
+})
+
+app.get('/', (req, res) => {
+  res.json('it worked')
 })
 
 app.listen(process.env.PORT || 3000, () => {
